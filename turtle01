@@ -1,0 +1,20 @@
+import turtle
+
+def draw_square(side_length):
+    for _ in range(4):
+        turtle.forward(side_length)
+        turtle.right(90)
+
+def draw_multiple_squares(side_length, count):
+    for i in range(count):
+        draw_square(side_length)
+        turtle.penup()
+        turtle.forward(side_length) 
+        turtle.pendown()
+
+side_length = int(input("정사각형 한 변의 길이를 입력하세요: "))
+count = int(input("정사각형의 개수를 입력하세요: "))
+
+draw_multiple_squares(side_length, count)
+
+turtle.done()
